@@ -9,5 +9,17 @@
         android:id="@+id/restaurantListFragment"
         android:name="com.example.michelin.RestaurantListFragment"
         android:label="restaurant_list_fragment"
-        tools:layout="@layout/restaurant_list_fragment" />
+        tools:layout="@layout/restaurant_list_fragment" >
+        <action
+            android:id="@+id/action_restaurantListFragment_to_addRestaurantFragment"
+            app:destination="@id/addRestaurantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRestaurantFragment"
+        android:name="com.example.michelin.AddRestaurantFragment"
+        android:label="AddRestaurantFragment" >
+        <action
+            android:id="@+id/action_addRestaurantFragment_to_restaurantListFragment"
+            app:destination="@id/restaurantListFragment" />
+    </fragment>
 </navigation>

@@ -1,16 +1,17 @@
 package com.example.michelin
 
 
+import android.content.ClipData
 import androidx.lifecycle.*
 import com.example.michelin.data.Restaurant
 import com.example.michelin.data.RestaurantDao
 import kotlinx.coroutines.launch
 
 class RestaurantViewModel (private val restaurantDao: RestaurantDao) : ViewModel() {
-    val allItems: LiveData<List<Restaurant>> = restaurantDao.getItems().asLiveData()
+    /**val allItems: LiveData<List<Restaurant>> = restaurantDao.getItems().asLiveData()**/
 
-    fun addNewItem(restaurantName: String, restaurantLocation: String,restaurantRate:String){
-        val newItem = getNewItemEntry(restaurantName, restaurantLocation,restaurantRate)
+    fun addNewItem(restaurantName: String,restaurantRate:String){
+        val newItem = getNewItemEntry(restaurantName, restaurantRate)
         insertItem(newItem)
     }
 
@@ -31,36 +32,37 @@ class RestaurantViewModel (private val restaurantDao: RestaurantDao) : ViewModel
             restaurantDao.delete(restaurant)
         }
     }
+
+    fun retrieveItem(id: Int): LiveData<Restaurant> {
+        return restaurantDao.getItem(id).asLiveData()
+    }
+
     private fun getUpdatedItemEntry(
         restaurantId: Int,
         restaurantName: String,
-        restaurantLocation: String,
         restaurantRate: Double,
     ): Restaurant {
         return Restaurant(
             id = restaurantId,
             restaurantName = restaurantName,
-            restaurantLocation = restaurantLocation,
             restaurantRate = restaurantRate,
         )
     }
     fun updateItem(
         restaurantId: Int,
         restaurantName: String,
-        restaurantLocation: String,
         restaurantRate: Double,
     ) {
-        val updatedItem = getUpdatedItemEntry(restaurantId, restaurantName, restaurantLocation,restaurantRate)
+        val updatedItem = getUpdatedItemEntry(restaurantId, restaurantName,restaurantRate)
         updateItem(updatedItem)
     }
     /**
      * Returns an instance of the [Restaurant] entity class with the item info entered by the user.
      * This will be used to add a new entry to the Inventory database.
      */
-    private fun getNewItemEntry(restaurantName: String, restaurantLocation: String,restaurantRate:String): Restaurant {
+    private fun getNewItemEntry(restaurantName: String, restaurantRate:String): Restaurant {
         return Restaurant(
             restaurantName = restaurantName,
-            restaurantLocation = restaurantLocation,
             restaurantRate = restaurantRate.toDouble(),
         )
     }

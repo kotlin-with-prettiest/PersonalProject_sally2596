@@ -11,13 +11,6 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface RestaurantDao {
 
-    @Query("SELECT * from item ORDER BY name ASC")
-    fun getItems(): Flow<List<Restaurant>>
-
-    @Query("SELECT * from item WHERE id = :id")
-    fun getItem(id: Int): Flow<Restaurant>
-
-
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(restuarant: Restaurant)
 

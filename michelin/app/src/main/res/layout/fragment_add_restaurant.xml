@@ -43,6 +43,7 @@
                 android:inputType="textAutoComplete|textCapWords"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
+        
 
         <RatingBar
             android:id="@+id/ratingBar"
