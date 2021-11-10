@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">michelin</string>
+    <string name="rest">식당</string>
+    <string name="rest_name_req">식당 이름</string>
+    <string name="save_action">저장하기</string>
+    <string name="add_new_rest">새 레스토랑 추가하기</string>
+    <string name="rest_rate">별점</string>
+</resources>
