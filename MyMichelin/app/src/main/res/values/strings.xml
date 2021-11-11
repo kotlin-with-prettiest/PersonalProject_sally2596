@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">MyMichelin</string>
-    <string name="restaurant1">식당</string>
+    <string name="restaurant1">식당1</string>
+    <string name="restaurant11">식당ㅇㅇ</string>
+    <string name="restaurant12">식당2</string>
+    <string name="restaurant13">식당3</string>
+    <string name="restaurant14">식당4</string>
+    <string name="restaurant15">식당5</string>
+    <string name="restaurant16">식당6</string>
+    <string name="restaurant17">식당7</string>
+    <string name="restaurant18">식당8</string>
+    <string name="restaurant19">식당9</string>
+    <string name="restaurant20">식당10</string>
+    <string name="restaurant21">식당11</string>
+    <string name="restaurant22">식당12</string>
+    <string name="restaurant23">식당13</string>
+    <string name="restaurant24">식당14</string>
+    <string name="restaurant25">식당15</string>
+    <string name="restaurant26">식당16</string>
+    <string name="restaurant27">식당17</string>
+    <string name="restaurant28">식당18</string>
+    <string name="restaurant29">식당19</string>
+    <string name="restaurant30">식당20</string>
+    <string name="restaurant31">식당21</string>
+    <string name="restaurant32">식당22</string>
 </resources>

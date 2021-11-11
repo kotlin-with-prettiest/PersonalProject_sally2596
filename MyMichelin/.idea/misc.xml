@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sally/Desktop/Personal Project(Git)/PersonalProject_sally2596/MyMichelin/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/sally/Desktop/Personal Project(Git)/PersonalProject_sally2596/MyMichelin/app/src/main/res/layout/fragment_restaurant_add.xml" value="0.25" />
+        <entry key="..\:/Users/sally/Desktop/Personal Project(Git)/PersonalProject_sally2596/MyMichelin/app/src/main/res/layout/fragment_restaurant_detail.xml" value="0.25" />
+        <entry key="..\:/Users/sally/Desktop/Personal Project(Git)/PersonalProject_sally2596/MyMichelin/app/src/main/res/layout/fragment_restaurant_list.xml" value="0.21422101449275363" />
         <entry key="..\:/Users/sally/Desktop/Personal Project(Git)/PersonalProject_sally2596/MyMichelin/app/src/main/res/layout/restaurant_list_item.xml" value="0.2115036231884058" />
       </map>
     </option>
